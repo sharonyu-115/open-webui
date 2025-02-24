@@ -333,7 +333,15 @@ async def get_all_models_responses(request: Request) -> list:
                     response if isinstance(response, list) else response.get("data", [])
                 ):
                     model["id"] = f"{prefix_id}.{model['id']}"
-
+            # Add nvdev prefix for NVIDIA endpoints
+            if "integrate.api.nvidia.com" in url:
+                for model in (
+                    response if isinstance(response, list) else response.get("data", [])
+                ):
+                    log.debug("Start to update model name for NVIDIA endpoints.")
+                    log.debug(f"model: {model['id']}")
+                    model["id"] = f"nvdev/{model['id']}"
+                    
     log.debug(f"get_all_models:responses() {responses}")
     return responses
 
