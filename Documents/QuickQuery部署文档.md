@@ -1,21 +1,22 @@
 # QuickQuery部署文档
 
-## 修订记录
+### 修订记录
 
 | 日期       | 版本 | 作者                                         | 描述                                                         |
 | ---------- | ---- | -------------------------------------------- | ------------------------------------------------------------ |
 | 2025.03.04 | V0.1 | Shuang Yu, Alex Qiu, Lark Zhang, Shawn Zhang | 初始版本，支持快速部署Web服务，本地化部署DeepseekV3和R1, AI联网搜索等功能。 |
 
-## 说明
+### 说明
 
 此文档提供有关如何部署和使用 **QuickQuery** 的详细说明。QuickQuery 提供了本地化部署 web 服务、本地化部署 DeepseekV3 和 R1，以及 AI 联网搜索等功能。目前版本为 v0.1。
 
 
-## 部署软件环境
+### 部署软件环境
 
 QuickQuery 的部署需要支持 Docker 引擎。您可以参考 [Docker 文档](https://docs.docker.com/engine/) 以获取详细的安装和配置指南。
 
 此外，Deepseek V3 和 R1 的本地化部署文档可通过以下链接获取：[Deepseek V3 和 R1 部署手册](https://nvidia-my.sharepoint.com/personal/hanyueh_nvidia_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fhanyueh_nvidia_com%2FDocuments%2Fhhy%2FCustomers%2F幻方%2Fbenchmark%2F)。
+<div style="page-break-after:always"></div>
 
 ## 1. 如何安装
 
@@ -52,6 +53,7 @@ docker logs 2ed553db9d89485623edde3db1eea0a6ce377afe813cde0524034a9c07e1ee83
 详细的本地化部署指南请参见：[DeepseekV3 和 R1 部署手册](https://nvidia-my.sharepoint.com/personal/hanyueh_nvidia_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fhanyueh_nvidia_com%2FDocuments%2Fhhy%2FCustomers%2F幻方%2Fbenchmark%2F) 。
 
 
+<div style="page-break-after:always"></div>
 
 ## 2. 使用说明
 
