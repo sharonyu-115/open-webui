@@ -1,4 +1,5 @@
-# QuickQuery部署文档
+# 企业级AI服务部署指南
+
 
 ### 修订记录
 
@@ -8,32 +9,24 @@
 
 ### 说明
 
-此文档提供有关如何部署和使用 **QuickQuery** 的详细说明。QuickQuery 提供了本地化部署 web 服务、本地化部署 DeepseekV3 和 R1，以及 AI 联网搜索等功能。目前版本为 v0.1。
+此文档提供有关如何部署和使用企业级AI服务的详细说明。本服务提供了本地化部署 web 服务、本地化部署 DeepseekV3 和 R1，以及 AI 联网搜索等功能。目前版本为 v0.1。
 
 
 ### 部署软件环境
 
-QuickQuery 的部署需要支持 Docker 引擎。您可以参考 [Docker 文档](https://docs.docker.com/engine/) 以获取详细的安装和配置指南。
+本服务的部署需要支持 Docker 引擎。您可以参考 [Docker 文档](https://docs.docker.com/engine/) 以获取详细的安装和配置指南。
 
 此外，Deepseek V3 和 R1 的本地化部署文档可通过以下链接获取：[Deepseek V3 和 R1 部署手册](https://nvidia-my.sharepoint.com/personal/hanyueh_nvidia_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fhanyueh_nvidia_com%2FDocuments%2Fhhy%2FCustomers%2F幻方%2Fbenchmark%2F)。
 <div style="page-break-after:always"></div>
 
 ## 1. 如何安装
 
-### 1.1 启动QuickQuery的Web服务
+### 1.1 启动Web服务
 
-只需两个简单步骤，您就可以完成部署。
-
-您应先下载以下脚本：
+只需1个简单步骤，您就可以完成部署。
 
 ```shell
-wget https://raw.githubusercontent.com/sharonyu-115/open-webui/main/backend/open_webui/routers/openai.py
-```
-
-然后，使用以下命令：
-
-```shell
-docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v ./openai.py:/app/backend/open_webui/routers/openai.py -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
 ![QuickQuery_00](./images/QuickQuery_00.png)
