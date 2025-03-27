@@ -12,7 +12,7 @@
 此文档提供有关如何部署和使用企业级AI服务的详细说明。本服务提供了本地化部署 web 服务、本地化部署 DeepseekV3 和 R1，以及 AI 联网搜索等功能。目前版本为 v0.1。
 
 ### 
-![open-webui drawio](https://github.com/user-attachments/assets/92e7d727-88fb-47f3-a780-82f6da39193c)
+![open-webui architecture](./images/QuickQuery_19.png)
 
 
 ### 部署软件环境
